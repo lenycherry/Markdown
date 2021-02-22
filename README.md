@@ -4,7 +4,7 @@ Based on Antho Welc tutorial on Udemy that I updated (several components and use
 
 # Traducteur Markdown
 
- App basée le tutorial d' Antho Welc sur Udemy formation React débutant, que j'ai mi au gôut du jour avec l'utilisation des Hooks et plusieurs composants.
+ App basée le tutorial d' Antho Welc sur Udemy formation React débutant, que j'ai mis au gôut du jour avec l'utilisation des Hooks et plusieurs composants.
 
 https://www.udemy.com/user/welc-anthony/
 
