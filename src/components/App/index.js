@@ -1,17 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Mardown from '../Markdown';
 import Result from '../Result';
+import { sampleText } from '../../sampleText';
+
 
 
 function App() {
-    return (
-        
-        <div className='App container'>
-         
-        <Mardown />
-        <Result />
 
+    const [markdownText, setMarkdownText] = useState(sampleText);
+
+    const editText = (e) => {
+        const text = e.target.value;
+        setMarkdownText(text);
+    };
+
+
+
+    return (
+
+        <div className='App container'>
+            <div className="row">
+
+            <Mardown markdownText={markdownText} editText={editText} />
+            <Result markdownText={markdownText} />
+            </div>
         </div>
     )
 }

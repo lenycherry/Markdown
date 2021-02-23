@@ -1,10 +1,20 @@
-import React from 'react'
-import { sampleText } from '../../sampleText'
+import React from 'react';
+import marked from 'marked';
 
-function Result() {
+function Result(props) {
+
+
+    const text = props.markdownText;
+
+    const renderText = (text) => {
+        const renderMarkdownText = marked(text, { sanitize: true });
+        return { __html: renderMarkdownText };
+    }
+
     return (
+
         <div className="col-sm-6">
-            { sampleText }
+            <div dangerouslySetInnerHTML={renderText(text)} />
         </div>
     )
 }

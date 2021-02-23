@@ -1,15 +1,20 @@
 import React from 'react';
-import { sampleText } from '../../sampleText';
 
-function Mardown() {
+
+function Mardown(props) {
+
     return (
 
-        
-            <div className="col-sm-6">
-           <textarea value={ sampleText } rows='35' className="form-control">
-           </textarea>
-           </div>
-        
+
+        <div className="col-sm-6">
+            <textarea
+                value={props.markdownText}
+                rows='35'
+                className="form-control"
+                onChange={props.editText}>
+            </textarea>
+        </div>
+
     )
 }
 
